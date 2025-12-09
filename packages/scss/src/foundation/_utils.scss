@@ -1,0 +1,11 @@
+@use './variables' as *;
+
+@each $key, $value in $spacing {
+    .dsc-width-#{$key}  {
+        width: $value;
+    }
+
+    .dsc-height-#{$key}  {
+        height: $value;
+    }
+}

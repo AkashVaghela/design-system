@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "dev": "yarn lerna run dev",
     "build": "yarn lerna run build"
   },
   "devDependencies": {
