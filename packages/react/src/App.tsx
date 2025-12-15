@@ -1,9 +1,18 @@
-import Color from "./atoms/color/color";
+import Margin from "./atoms/margin/margin";
+import Select from "./molecules/select";
 
 function App() {
   return (
     <>
-      <Color hexCode="#232435" width="lg" height="lg" />
+      <Margin>
+        <Select
+          options={[
+            { label: "Staraw hat pirates", value: "1" },
+            { label: "Red haired pirates", value: "2" },
+          ]}
+          onSelectOption={(option, index) => console.log(option, index)}
+        />
+      </Margin>
     </>
   );
 }

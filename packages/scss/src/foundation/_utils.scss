@@ -1,5 +1,9 @@
 @use './variables' as *;
 
+// =======================================
+// Height & Width utils
+// =======================================
+
 @each $key, $value in $spacing {
     .dsc-width-#{$key}  {
         width: $value;
@@ -7,5 +11,31 @@
 
     .dsc-height-#{$key}  {
         height: $value;
+    }
+}
+
+// =======================================
+// Font size utils
+// =======================================
+
+@each $key, $value in $fs {
+    .dsc-fs-#{$key}  {
+        font-size: $value;
+    }
+}
+
+// =======================================
+// Margin utils
+// =======================================
+
+@each $space, $value in $spacing {
+    .dsc-margin-#{$space} {
+        margin: $value;
+    }
+
+    @each $side in $sides {
+        .dsc-margin-#{$side}-#{$space} {
+            margin-#{$side}: $value;
+        }
     }
 }

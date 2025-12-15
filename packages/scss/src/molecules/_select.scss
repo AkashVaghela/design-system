@@ -1,0 +1,62 @@
+@use "../foundation/variables" as *;
+@use "../foundation/colors" as *;
+@use "../foundation/mixins" as *;
+
+.dsc-select {
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        background: $form-bg-color;
+        border: 1px solid $form-border-color;
+        @include padding('xs');
+
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__options {
+        background: $form-bg;
+        list-style: none;
+        @include padding('none');
+        @include margin('none');
+
+        box-sizing: border-box;
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+
+        box-shadow: map-get($shadows, base);
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include padding('xs');
+     
+        cursor: pointer;
+
+        &:hover {
+            background: $form-bg-color-hover;
+        }
+    }
+
+    &__option--selected {
+        background: $form-bg-option-selected;
+    }
+
+    .chevron {
+        animation: all 1s ease-in-out;
+
+        &__open {
+            transform: rotate(90deg);
+        }
+
+        &__close {
+            transform: rotate(0deg);
+        }
+    }
+}
