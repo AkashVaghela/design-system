@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "@ds/scss/lib/global.css";
-import Text from "../atoms/text/text";
+import Text from "../../atoms/text/text";
 
 interface SelectOption {
   label: string;
@@ -51,6 +51,7 @@ const Select: React.FC<SelectProps> = ({
         className="dsc-select__label"
         onClick={handleSelect}
         ref={labelRef}
+        data-testid="DscSelectButton"
       >
         <Text>{isSelected ? isSelected.label : label}</Text>
         <svg
@@ -77,6 +78,7 @@ const Select: React.FC<SelectProps> = ({
             const selected = isSelected?.value === option.value;
             return (
               <li
+                role="menuitemradio"
                 key={option.value}
                 onClick={() => handleSelectOption(option, index)}
                 className={`dsc-select__option ${selected ? "dsc-select__option--selected" : ""}`}

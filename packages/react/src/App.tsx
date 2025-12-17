@@ -1,5 +1,5 @@
 import Margin from "./atoms/margin/margin";
-import Select from "./molecules/select";
+import Select from "./molecules/select/select";
 
 function App() {
   return (
