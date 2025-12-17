@@ -14,7 +14,6 @@ interface SelectProps {
 }
 
 /** @todo Implement render props */
-/** @todo Add A11y */
 
 const Select: React.FC<SelectProps> = ({
   label = "Select an option...",
