@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../foundation/variables" as *;
 @use "../foundation/colors" as *;
 @use "../foundation/mixins" as *;
@@ -27,7 +28,7 @@
         position: absolute;
         z-index: 99;
 
-        box-shadow: map-get($shadows, base);
+        box-shadow: map.get($shadows, base);
     }
 
     &__option {
