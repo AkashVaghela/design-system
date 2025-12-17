@@ -1,6 +1,5 @@
 {
-  "name": "@ds/react",
-  "private": true,
+  "name": "@akashlabs/react",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -40,5 +39,8 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vitest": "^4.0.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
